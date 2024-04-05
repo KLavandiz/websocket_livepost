@@ -1,0 +1,1054 @@
+openapi: 3.0.3
+info:
+  title: Livepost
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/v1/comments:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 1
+                      body: []
+                      user_id: 10
+                      post_id: 53
+                    -
+                      id: 2
+                      body: []
+                      user_id: 9
+                      post_id: 62
+                    -
+                      id: 3
+                      body: []
+                      user_id: 9
+                      post_id: 171
+                    -
+                      id: 4
+                      body: []
+                      user_id: 3
+                      post_id: 172
+                    -
+                      id: 5
+                      body: []
+                      user_id: 1
+                      post_id: 4
+                    -
+                      id: 6
+                      body: []
+                      user_id: 8
+                      post_id: 72
+                    -
+                      id: 7
+                      body: []
+                      user_id: 6
+                      post_id: 9
+                    -
+                      id: 8
+                      body: []
+                      user_id: 1
+                      post_id: 44
+                    -
+                      id: 9
+                      body: []
+                      user_id: 2
+                      post_id: 138
+                    -
+                      id: 10
+                      body: []
+                      user_id: 1
+                      post_id: 106
+                  links:
+                    first: 'http://localhost/api/v1/comments?page=1'
+                    last: 'http://localhost/api/v1/comments?page=1'
+                    prev: null
+                    next: null
+                  meta:
+                    current_page: 1
+                    from: 1
+                    last_page: 1
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://localhost/api/v1/comments?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    path: 'http://localhost/api/v1/comments'
+                    per_page: 20
+                    to: 10
+                    total: 10
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        body: []
+                        user_id: 10
+                        post_id: 53
+                      -
+                        id: 2
+                        body: []
+                        user_id: 9
+                        post_id: 62
+                      -
+                        id: 3
+                        body: []
+                        user_id: 9
+                        post_id: 171
+                      -
+                        id: 4
+                        body: []
+                        user_id: 3
+                        post_id: 172
+                      -
+                        id: 5
+                        body: []
+                        user_id: 1
+                        post_id: 4
+                      -
+                        id: 6
+                        body: []
+                        user_id: 8
+                        post_id: 72
+                      -
+                        id: 7
+                        body: []
+                        user_id: 6
+                        post_id: 9
+                      -
+                        id: 8
+                        body: []
+                        user_id: 1
+                        post_id: 44
+                      -
+                        id: 9
+                        body: []
+                        user_id: 2
+                        post_id: 138
+                      -
+                        id: 10
+                        body: []
+                        user_id: 1
+                        post_id: 106
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        body:
+                          type: array
+                          example: []
+                        user_id:
+                          type: integer
+                          example: 10
+                        post_id:
+                          type: integer
+                          example: 53
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                        example: 'http://localhost/api/v1/comments?page=1'
+                      last:
+                        type: string
+                        example: 'http://localhost/api/v1/comments?page=1'
+                      prev:
+                        type: string
+                        example: null
+                      next:
+                        type: string
+                        example: null
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      from:
+                        type: integer
+                        example: 1
+                      last_page:
+                        type: integer
+                        example: 1
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: 'http://localhost/api/v1/comments?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: null
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      path:
+                        type: string
+                        example: 'http://localhost/api/v1/comments'
+                      per_page:
+                        type: integer
+                        example: 20
+                      to:
+                        type: integer
+                        example: 10
+                      total:
+                        type: integer
+                        example: 10
+      tags:
+        - 'Comment Management'
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Comment Management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                body:
+                  type: string
+                  description: ''
+                  example: fuga
+                user_id:
+                  type: integer
+                  description: ''
+                  example: 14
+                post_id:
+                  type: integer
+                  description: ''
+                  example: 1
+              required:
+                - body
+                - user_id
+                - post_id
+      security: []
+  '/api/v1/comments/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 1
+                    body: []
+                    user_id: 10
+                    post_id: 53
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 1
+                      body:
+                        type: array
+                        example: []
+                      user_id:
+                        type: integer
+                        example: 10
+                      post_id:
+                        type: integer
+                        example: 53
+      tags:
+        - 'Comment Management'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the comment.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/v1/comments/{comment_id}':
+    patch:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Comment Management'
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Comment Management'
+      security: []
+    parameters:
+      -
+        in: path
+        name: comment_id
+        description: 'The ID of the comment.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/v1/posts:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 1
+                      title: dolor
+                      body: []
+                    -
+                      id: 2
+                      title: cupiditate
+                      body: []
+                    -
+                      id: 3
+                      title: et
+                      body: []
+                    -
+                      id: 4
+                      title: voluptate
+                      body: []
+                    -
+                      id: 5
+                      title: ab
+                      body: []
+                    -
+                      id: 6
+                      title: atque
+                      body: []
+                    -
+                      id: 7
+                      title: saepe
+                      body: []
+                    -
+                      id: 8
+                      title: quibusdam
+                      body: []
+                    -
+                      id: 9
+                      title: ut
+                      body: []
+                    -
+                      id: 10
+                      title: error
+                      body: []
+                    -
+                      id: 11
+                      title: exercitationem
+                      body: []
+                    -
+                      id: 12
+                      title: aliquam
+                      body: []
+                    -
+                      id: 13
+                      title: impedit
+                      body: []
+                    -
+                      id: 14
+                      title: officiis
+                      body: []
+                    -
+                      id: 15
+                      title: consectetur
+                      body: []
+                    -
+                      id: 16
+                      title: et
+                      body: []
+                    -
+                      id: 17
+                      title: error
+                      body: []
+                    -
+                      id: 18
+                      title: et
+                      body: []
+                    -
+                      id: 19
+                      title: saepe
+                      body: []
+                    -
+                      id: 20
+                      title: voluptatibus
+                      body: []
+                  links:
+                    first: 'http://localhost/api/v1/posts?page=1'
+                    last: 'http://localhost/api/v1/posts?page=10'
+                    prev: null
+                    next: 'http://localhost/api/v1/posts?page=2'
+                  meta:
+                    current_page: 1
+                    from: 1
+                    last_page: 10
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://localhost/api/v1/posts?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: 'http://localhost/api/v1/posts?page=2'
+                        label: '2'
+                        active: false
+                      -
+                        url: 'http://localhost/api/v1/posts?page=3'
+                        label: '3'
+                        active: false
+                      -
+                        url: 'http://localhost/api/v1/posts?page=4'
+                        label: '4'
+                        active: false
+                      -
+                        url: 'http://localhost/api/v1/posts?page=5'
+                        label: '5'
+                        active: false
+                      -
+                        url: 'http://localhost/api/v1/posts?page=6'
+                        label: '6'
+                        active: false
+                      -
+                        url: 'http://localhost/api/v1/posts?page=7'
+                        label: '7'
+                        active: false
+                      -
+                        url: 'http://localhost/api/v1/posts?page=8'
+                        label: '8'
+                        active: false
+                      -
+                        url: 'http://localhost/api/v1/posts?page=9'
+                        label: '9'
+                        active: false
+                      -
+                        url: 'http://localhost/api/v1/posts?page=10'
+                        label: '10'
+                        active: false
+                      -
+                        url: 'http://localhost/api/v1/posts?page=2'
+                        label: 'Next &raquo;'
+                        active: false
+                    path: 'http://localhost/api/v1/posts'
+                    per_page: 20
+                    to: 20
+                    total: 200
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        title: dolor
+                        body: []
+                      -
+                        id: 2
+                        title: cupiditate
+                        body: []
+                      -
+                        id: 3
+                        title: et
+                        body: []
+                      -
+                        id: 4
+                        title: voluptate
+                        body: []
+                      -
+                        id: 5
+                        title: ab
+                        body: []
+                      -
+                        id: 6
+                        title: atque
+                        body: []
+                      -
+                        id: 7
+                        title: saepe
+                        body: []
+                      -
+                        id: 8
+                        title: quibusdam
+                        body: []
+                      -
+                        id: 9
+                        title: ut
+                        body: []
+                      -
+                        id: 10
+                        title: error
+                        body: []
+                      -
+                        id: 11
+                        title: exercitationem
+                        body: []
+                      -
+                        id: 12
+                        title: aliquam
+                        body: []
+                      -
+                        id: 13
+                        title: impedit
+                        body: []
+                      -
+                        id: 14
+                        title: officiis
+                        body: []
+                      -
+                        id: 15
+                        title: consectetur
+                        body: []
+                      -
+                        id: 16
+                        title: et
+                        body: []
+                      -
+                        id: 17
+                        title: error
+                        body: []
+                      -
+                        id: 18
+                        title: et
+                        body: []
+                      -
+                        id: 19
+                        title: saepe
+                        body: []
+                      -
+                        id: 20
+                        title: voluptatibus
+                        body: []
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        title:
+                          type: string
+                          example: dolor
+                        body:
+                          type: array
+                          example: []
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                        example: 'http://localhost/api/v1/posts?page=1'
+                      last:
+                        type: string
+                        example: 'http://localhost/api/v1/posts?page=10'
+                      prev:
+                        type: string
+                        example: null
+                      next:
+                        type: string
+                        example: 'http://localhost/api/v1/posts?page=2'
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      from:
+                        type: integer
+                        example: 1
+                      last_page:
+                        type: integer
+                        example: 10
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: 'http://localhost/api/v1/posts?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: 'http://localhost/api/v1/posts?page=2'
+                            label: '2'
+                            active: false
+                          -
+                            url: 'http://localhost/api/v1/posts?page=3'
+                            label: '3'
+                            active: false
+                          -
+                            url: 'http://localhost/api/v1/posts?page=4'
+                            label: '4'
+                            active: false
+                          -
+                            url: 'http://localhost/api/v1/posts?page=5'
+                            label: '5'
+                            active: false
+                          -
+                            url: 'http://localhost/api/v1/posts?page=6'
+                            label: '6'
+                            active: false
+                          -
+                            url: 'http://localhost/api/v1/posts?page=7'
+                            label: '7'
+                            active: false
+                          -
+                            url: 'http://localhost/api/v1/posts?page=8'
+                            label: '8'
+                            active: false
+                          -
+                            url: 'http://localhost/api/v1/posts?page=9'
+                            label: '9'
+                            active: false
+                          -
+                            url: 'http://localhost/api/v1/posts?page=10'
+                            label: '10'
+                            active: false
+                          -
+                            url: 'http://localhost/api/v1/posts?page=2'
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      path:
+                        type: string
+                        example: 'http://localhost/api/v1/posts'
+                      per_page:
+                        type: integer
+                        example: 20
+                      to:
+                        type: integer
+                        example: 20
+                      total:
+                        type: integer
+                        example: 200
+      tags:
+        - 'Post Management'
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Post Management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: ''
+                  example: perspiciatis
+                body:
+                  type: string
+                  description: ''
+                  example: consequuntur
+                user_ids:
+                  type: object
+                  description: ''
+                  example: []
+                  properties: {  }
+              required:
+                - title
+                - body
+                - user_ids
+      security: []
+  '/api/v1/posts/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 1
+                    title: dolor
+                    body: []
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 1
+                      title:
+                        type: string
+                        example: dolor
+                      body:
+                        type: array
+                        example: []
+      tags:
+        - 'Post Management'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the post.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/v1/posts/{post_id}':
+    patch:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Post Management'
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Post Management'
+      security: []
+    parameters:
+      -
+        in: path
+        name: post_id
+        description: 'The ID of the post.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/v1/users:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters:
+        -
+          in: query
+          name: page_size
+          description: 'Size per page 20.'
+          example: 14
+          required: true
+          schema:
+            type: integer
+            description: 'Size per page 20.'
+            example: 14
+        -
+          in: query
+          name: page
+          description: 'Page to view.'
+          example: 5
+          required: false
+          schema:
+            type: integer
+            description: 'Page to view.'
+            example: 5
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 1
+                      name: 'Dorthy Parisian'
+                      email: herman50@example.net
+                    -
+                      id: 2
+                      name: 'Lia Larkin'
+                      email: kane.hoeger@example.org
+                    -
+                      id: 3
+                      name: 'Ryder Watsica'
+                      email: elvie37@example.org
+                    -
+                      id: 4
+                      name: 'Wilhelm Rau'
+                      email: rose85@example.com
+                    -
+                      id: 5
+                      name: 'Trevor Lindgren III'
+                      email: chaim.rowe@example.com
+                    -
+                      id: 6
+                      name: 'Brigitte Hudson'
+                      email: kkunze@example.com
+                    -
+                      id: 7
+                      name: 'Francisca Volkman'
+                      email: kautzer.donna@example.org
+                    -
+                      id: 8
+                      name: 'Vivienne Beier MD'
+                      email: yolanda.reynolds@example.net
+                    -
+                      id: 9
+                      name: 'Abraham Gleichner'
+                      email: flossie27@example.org
+                    -
+                      id: 10
+                      name: 'Hillard McClure DVM'
+                      email: felix41@example.com
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        name: 'Dorthy Parisian'
+                        email: herman50@example.net
+                      -
+                        id: 2
+                        name: 'Lia Larkin'
+                        email: kane.hoeger@example.org
+                      -
+                        id: 3
+                        name: 'Ryder Watsica'
+                        email: elvie37@example.org
+                      -
+                        id: 4
+                        name: 'Wilhelm Rau'
+                        email: rose85@example.com
+                      -
+                        id: 5
+                        name: 'Trevor Lindgren III'
+                        email: chaim.rowe@example.com
+                      -
+                        id: 6
+                        name: 'Brigitte Hudson'
+                        email: kkunze@example.com
+                      -
+                        id: 7
+                        name: 'Francisca Volkman'
+                        email: kautzer.donna@example.org
+                      -
+                        id: 8
+                        name: 'Vivienne Beier MD'
+                        email: yolanda.reynolds@example.net
+                      -
+                        id: 9
+                        name: 'Abraham Gleichner'
+                        email: flossie27@example.org
+                      -
+                        id: 10
+                        name: 'Hillard McClure DVM'
+                        email: felix41@example.com
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        name:
+                          type: string
+                          example: 'Dorthy Parisian'
+                        email:
+                          type: string
+                          example: herman50@example.net
+      tags:
+        - 'User Management'
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'User Management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: explicabo
+                email:
+                  type: string
+                  description: ''
+                  example: brekke.ashtyn@example.org
+                password:
+                  type: string
+                  description: ''
+                  example: dolores
+              required:
+                - name
+                - email
+                - password
+      security: []
+  '/api/v1/users/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 1
+                    name: 'Dorthy Parisian'
+                    email: herman50@example.net
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 1
+                      name:
+                        type: string
+                        example: 'Dorthy Parisian'
+                      email:
+                        type: string
+                        example: herman50@example.net
+      tags:
+        - 'User Management'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the user.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/v1/users/{user_id}':
+    patch:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'User Management'
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'User Management'
+      security: []
+    parameters:
+      -
+        in: path
+        name: user_id
+        description: 'The ID of the user.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+tags:
+  -
+    name: 'Comment Management'
+    description: 'APIs to manage comment resource.'
+  -
+    name: 'Post Management'
+    description: 'APIs to manage post resource.'
+  -
+    name: 'User Management'
+    description: 'APIs to manage user resource.'

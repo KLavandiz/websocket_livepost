@@ -1,0 +1,235 @@
+name: 'Post Management'
+description: 'APIs to manage post resource.'
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/posts
+    metadata:
+      groupName: 'Post Management'
+      groupDescription: 'APIs to manage post resource.'
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":1,"title":"dolor","body":[]},{"id":2,"title":"cupiditate","body":[]},{"id":3,"title":"et","body":[]},{"id":4,"title":"voluptate","body":[]},{"id":5,"title":"ab","body":[]},{"id":6,"title":"atque","body":[]},{"id":7,"title":"saepe","body":[]},{"id":8,"title":"quibusdam","body":[]},{"id":9,"title":"ut","body":[]},{"id":10,"title":"error","body":[]},{"id":11,"title":"exercitationem","body":[]},{"id":12,"title":"aliquam","body":[]},{"id":13,"title":"impedit","body":[]},{"id":14,"title":"officiis","body":[]},{"id":15,"title":"consectetur","body":[]},{"id":16,"title":"et","body":[]},{"id":17,"title":"error","body":[]},{"id":18,"title":"et","body":[]},{"id":19,"title":"saepe","body":[]},{"id":20,"title":"voluptatibus","body":[]}],"links":{"first":"http:\/\/localhost\/api\/v1\/posts?page=1","last":"http:\/\/localhost\/api\/v1\/posts?page=10","prev":null,"next":"http:\/\/localhost\/api\/v1\/posts?page=2"},"meta":{"current_page":1,"from":1,"last_page":10,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/v1\/posts?page=1","label":"1","active":true},{"url":"http:\/\/localhost\/api\/v1\/posts?page=2","label":"2","active":false},{"url":"http:\/\/localhost\/api\/v1\/posts?page=3","label":"3","active":false},{"url":"http:\/\/localhost\/api\/v1\/posts?page=4","label":"4","active":false},{"url":"http:\/\/localhost\/api\/v1\/posts?page=5","label":"5","active":false},{"url":"http:\/\/localhost\/api\/v1\/posts?page=6","label":"6","active":false},{"url":"http:\/\/localhost\/api\/v1\/posts?page=7","label":"7","active":false},{"url":"http:\/\/localhost\/api\/v1\/posts?page=8","label":"8","active":false},{"url":"http:\/\/localhost\/api\/v1\/posts?page=9","label":"9","active":false},{"url":"http:\/\/localhost\/api\/v1\/posts?page=10","label":"10","active":false},{"url":"http:\/\/localhost\/api\/v1\/posts?page=2","label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/api\/v1\/posts","per_page":20,"to":20,"total":200}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '57'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/posts/{id}'
+    metadata:
+      groupName: 'Post Management'
+      groupDescription: 'APIs to manage post resource.'
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the post.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":{"id":1,"title":"dolor","body":[]}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '56'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/posts
+    metadata:
+      groupName: 'Post Management'
+      groupDescription: 'APIs to manage post resource.'
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: ''
+        required: true
+        example: perspiciatis
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      body:
+        name: body
+        description: ''
+        required: true
+        example: consequuntur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      user_ids:
+        name: user_ids
+        description: ''
+        required: true
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      title: perspiciatis
+      body: consequuntur
+      user_ids: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PATCH
+    uri: 'api/v1/posts/{post_id}'
+    metadata:
+      groupName: 'Post Management'
+      groupDescription: 'APIs to manage post resource.'
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      post_id:
+        name: post_id
+        description: 'The ID of the post.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      post_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/v1/posts/{post_id}'
+    metadata:
+      groupName: 'Post Management'
+      groupDescription: 'APIs to manage post resource.'
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      post_id:
+        name: post_id
+        description: 'The ID of the post.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      post_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
